@@ -201,3 +201,46 @@ function triggerONamaAnimation() {
 window.addEventListener("scroll", triggerONamaAnimation);
 window.addEventListener("load", triggerONamaAnimation);
 window.addEventListener("resize", triggerONamaAnimation);
+
+
+
+
+
+
+
+// --- PER LETTER COLOR CHANGE FOR RIGHT ROTATED TEXT ---
+const rightRotated = document.querySelector(".rotated-fixed.right");
+const oNamaSectionX = document.getElementById("o-nama");
+
+// Pretvori tekst u span slova
+if (rightRotated && !rightRotated.dataset.split) {
+    const text = rightRotated.textContent.trim();
+    rightRotated.innerHTML = text.split("").map(letter =>
+        `<span class="letter">${letter}</span>`
+    ).join("");
+    rightRotated.dataset.split = "true";
+}
+
+const letters = document.querySelectorAll(".rotated-fixed.right .letter");
+
+function updateLetterColors() {
+    if (!letters.length || !oNamaSectionX) return;
+
+    const sectionRect = oNamaSectionX.getBoundingClientRect();
+
+    letters.forEach(letter => {
+        const letterRect = letter.getBoundingClientRect();
+
+        const isOverlapping =
+            letterRect.top < sectionRect.bottom &&
+            letterRect.bottom > sectionRect.top;
+
+        // Ako slovo preklapa sekciju → belo
+        // Ako ne → crno
+        letter.style.color = isOverlapping ? "#ffffff" : "#000000";
+    });
+}
+
+window.addEventListener("scroll", updateLetterColors);
+window.addEventListener("resize", updateLetterColors);
+window.addEventListener("load", updateLetterColors);
