@@ -24,7 +24,7 @@ html, body {
 }
 
 body {
-  background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0)), url('imgs/bgd.png');
+  background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0)), url('bgd.png');
   background-size: cover;
   background-position: center;
 }
@@ -512,6 +512,7 @@ section .section-description {
   background-size: cover;
   z-index: 2;
 }
+
 
 
 
