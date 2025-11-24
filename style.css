@@ -24,7 +24,7 @@ html, body {
 }
 
 body {
-  background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0)), url('bgd.png');
+  background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0)), url('imgs/bgd.png');
   background-size: cover;
   background-position: center;
 }
@@ -166,7 +166,7 @@ a { color: inherit; text-decoration: none; }
 
 .rotated-fixed.right {
   position:fixed;
-  right:-150px;
+  right:-220px;
   top:0;
   transform-origin:center;
   transform: translate(-50%, -50%) rotate(-270deg);
@@ -180,6 +180,12 @@ a { color: inherit; text-decoration: none; }
   opacity:0.95;
   transition:left .08s linear, top .08s linear;
 }
+
+.rotated-fixed.right span {
+  transition: color 0.075s linear;
+}
+
+
 
 /* Sakrij bočne tekstove na manjim ekranima */
 @media (max-width: 1150px) {
@@ -462,8 +468,6 @@ section .section-description {
 
 .section-title {
   font-size: 48px;
-  margin-top: -50px !important;
-  margin-bottom: 20px;
 }
 
 .section-description {
@@ -475,4 +479,41 @@ section .section-description {
   max-width: 100%;
   display: block;
 }
+
+#o-nama .section-title {
+  margin-top: -200px !important;
+  margin-bottom: 100px !important;
+}
+
+
+
+
+
+/********* USLUGE SEKCIJA *********/
+
+#usluge {
+  position: relative;
+  background-color: #ffffff;
+  overflow: hidden;
+  padding-top: 140px; /* prostor za talas */
+}
+
+
+.usluge-wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  background: url('data:image/svg+xml;utf8,\
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160">\
+      <path fill="%23111" d="M0,0 L1440,0 C1300,30 1200,60 1050,40 C900,20 720,70 540,30 C360,-10 180,60 0,40 Z"></path>\
+    </svg>') no-repeat top;
+  background-size: cover;
+  z-index: 2;
+}
+
+
+
+
 
