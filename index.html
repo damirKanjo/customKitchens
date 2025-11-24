@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kitchen — Hero with Menu</title>
+  <link href="style.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero" id="hero">
+    <div class="fade-line" aria-hidden="true"></div>
+
+    <div class="header-flex">
+      <button id="menuToggle" class="menu-toggle" aria-label="open menu" type="button">
+        <img src="imgs/knife.png" class="menu-icon" alt="knife">
+        <img src="imgs/fork.png" class="menu-icon" alt="fork">
+        <img src="imgs/spoon.png" class="menu-icon" alt="spoon">
+      </button>
+
+      <div class="brand-row" role="group" aria-label="brand and socials">
+        <div class="logo">Kitchen</div>
+        <div class="social-icons" aria-hidden="true">
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-facebook"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Rotirani tekst koji će JS pozicionirati točno ispod gumba -->
+  <div class="rotated-fixed left" aria-hidden="true">The heart of the home, the kitchen.</div>
+  <div class="rotated-fixed right" aria-hidden="true">The heart of the home, the kitchen.</div>
+
+  <!-- Hero content poravnat s pocetkom fade-linije -->
+  <div class="hero-content" role="region" aria-label="Hero content">
+    <!-- <h1 class="hero-title">Dizajn luksuznih kuhinja</h1>
+    <h2 class="hero-title hero-sub">U Vašem domu</h2>
+    <p class="hero-lead"><strong>Središte vašeg doma,</strong> 
+        <span class="hero-lead-muted">kuhinja kao mjesto okupljanja vaše obitelji. 
+            Moderne kuhinje, baš po vašoj mjeri!
+            Od slavlja, druženja s prijateljima, do obiteljskih ručkova pa i domaće zadaće, sve na jednom mjestu. 
+            Živite i kuhajte sa stilom.
+        </span>
+    </p> -->
+  </div>
+
+  <nav class="side-menu" id="sideMenu" aria-hidden="true" role="navigation">
+    <div class="close-btn" id="closeBtn" aria-label="close menu"><i class="fas fa-arrow-left" aria-hidden="true"></i></div>
+    <a href="#o-nama">O nama</a>
+    <a href="#usluge">Usluge</a>
+    <a href="#galerija">Galerija</a>
+    <a href="#kontakt">Kontakt</a>
+  </nav>
+
+  <!-- O NAMA -->
+  <section id="o-nama">
+    <div class="o-nama-wrapper">
+      <h2 class="section-title">O nama</h2>
+      <p class="section-description" id="typingText"></p>
+    </div>
+  </section>
+
+  <!-- USLUGE -->
+  <section id="usluge">
+    <h2>Usluge</h2>
+  </section>
+
+
+  <section id="galerija">
+    <h2>Galerija</h2>
+  </section>
+
+  <section id="kontakt">
+    <h2>Kontakt</h2>
+  </section>
+
+  <!-- Navigacijski kružići -->
+  <div class="nav-circles">
+    <button id="circleLeft" class="circle blurred" aria-label="Previous section">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+    <button id="circleRight" class="circle" aria-label="Next section">
+      <i id="circleRightIcon" class="arrow fas fa-arrow-right"></i>
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+</body>
+</html>
