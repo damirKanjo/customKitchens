@@ -58,7 +58,7 @@ if (menuToggle) {
 const circleLeft = document.getElementById("circleLeft");
 const circleRight = document.getElementById("circleRight");
 const menuLinks = document.querySelectorAll(".side-menu a");
-const sections = document.querySelectorAll("header.hero, section");
+const sections = document.querySelectorAll("header#hero, section");
 
 let currentSection = 0;
 
@@ -82,12 +82,10 @@ function computeCurrentSection() {
 // Skroluj do određene sekcije
 function scrollToSection(index) {
   currentSection = index;
-  window.scrollTo({
-    top: sections[index].offsetTop,
-    behavior: "smooth"
-  });
+  sections[index].scrollIntoView({ behavior: "smooth", block: "start" });
   updateButtons();
 }
+
 
 // Ažuriraj strelice
 function updateButtons() {
@@ -165,7 +163,7 @@ const oNamaSection = document.getElementById("o-nama");
 const oNamaTitle = oNamaSection.querySelector(".section-title");
 const typingTarget = document.getElementById("typingText");
 
-const fullText = "Mi smo tvrtka za proizvodnju kuhinja po meri iz Osijeka. Vaše ideje naše delo. Naš kvalitet je garancija koju nudimo. Vrhunska izrada kuhinja po meri. Sve po vašem ukusu. Od dizajna do montaže vas deli samo jedan poziv.";
+const fullText = "Vjerujemo da svaka kuhinja zahtjeva individualni pristup. Jedinstveno rješenje. Baš po Vašoj mjeri. Baš po Vašim potrebama. Mi Vam nudimo usluge izrade kuhinja po mjeri. Od dizajna do montaže. Vaše ideje, naše delo. Vrhunska izrada kuhinja po meri. Sve po Vašem ukusu. Kvalitet, predanost i profesionalnost su naši temelji.";
 
 let oNamaAnimated = false;
 
