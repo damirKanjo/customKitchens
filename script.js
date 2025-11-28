@@ -134,6 +134,9 @@ window.addEventListener("load", () => {
 
 
 
+
+
+
 //****** KONTROLA ZA DUGMICE *****//
 const kontakt = document.getElementById("kontakt");
 const circle = document.getElementById("circleRight");
